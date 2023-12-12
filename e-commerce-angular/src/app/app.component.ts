@@ -17,7 +17,7 @@ export class AppComponent {
     this.configure();
   }
   authConfig:AuthConfig={
-    issuer:'http://localhost:9096/auth/realms/Ecommerce',
+    issuer:'http://localhost:9093/auth/realms/Ecommerce',
     redirectUri:window.location.origin,
     clientId:'e-commerce-angular',
     responseType:'code',

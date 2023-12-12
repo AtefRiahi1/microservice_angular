@@ -65,7 +65,7 @@ export class UpdateproduitComponent implements OnInit {
     this.produitService.updateProduit(this.product)
       .subscribe(() => {
         // On successful update, navigate to the product details page
-        this.router.navigate(['/produitsadmin', this.productId]);
+        this.router.navigate(['/produitsadmin']);
       }, error => {
         // Handle any error that occurred during the update process
         console.error('Error updating product:', error);

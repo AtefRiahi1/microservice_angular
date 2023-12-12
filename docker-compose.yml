@@ -74,7 +74,7 @@ services:
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
     depends_on:
-      - 
+      - discovery
       
 #container pour vetements
   vetements:

@@ -29,7 +29,7 @@ export class AjoutercategorieComponent {
       this.categoriesService.ajouterCategorie(newCategory).subscribe(
         (addedCategory) => {
           // Redirect to the category list or perform any other action after adding the category
-          this.router.navigate(['']);
+          this.router.navigate(['/listcategorie']);
         },
         (error) => {
           console.error('Error adding category:', error);

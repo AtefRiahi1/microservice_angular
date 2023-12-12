@@ -35,6 +35,7 @@ export class ListcategorieComponent {
   supprimerCategorie(id: number) {
     // Call your service to delete the category
     this.categories.deleteCategorie(id).subscribe(()=>{
+      location.reload();
       this.Router.navigate(['/listcategorie']);}
     );
   }

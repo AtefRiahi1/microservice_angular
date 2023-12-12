@@ -11,9 +11,8 @@
         <p class="price">{{ produit.prix | currency: 'USD': 'symbol' }}</p>
         <p>{{ produit.description }}</p>
         <div class="button-group">
-          <a class="btn btn-primary" href="/editproduit/{{ produit.id }}">Edit</a>
-          <button class="btn btn-danger" (click)="deleteProduit(produit.id)">Delete</button>
-          <a class="btn btn-secondary" href="/produitdetail/{{ produit.id }}">View Details</a>
+          <button class="btn btn-outline-dark" >Commander</button>
+          <a class="btn btn-secondary" routerLink="/produitdetail/{{ produit.id }}">View Details</a>
         </div>
       </div>
     </div>

@@ -10,7 +10,7 @@ import { Observable, map, catchError, of } from "rxjs";
   })
 export class Categorieservice {
 
-    private url='http://loaclhost:9092'
+    private url='http://localhost:9092'
     constructor(private http: HttpClient) { }
 
 

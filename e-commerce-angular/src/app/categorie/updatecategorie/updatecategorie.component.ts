@@ -51,7 +51,7 @@ export class UpdatecategorieComponent {
 
     this.categoriesService.updatecategorie(updatedCategory).subscribe(
       () => {
-        this.router.navigate(['']);
+        this.router.navigate(['/listcategorie']);
       },
       (error) => {
         console.error('Error updating category:', error);

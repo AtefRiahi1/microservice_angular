@@ -25,7 +25,8 @@ delete(idP: number) {
   if (confirmDelete) {
     this.piecesservice.deleteP(idP).subscribe(() => {
       alert("Piece supprimé");
-      location.reload()
+      this.Router.navigate(['pieces']);
+      location.reload();
     });
   } else {
 

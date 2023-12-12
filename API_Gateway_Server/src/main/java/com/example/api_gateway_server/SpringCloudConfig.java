@@ -17,6 +17,14 @@ public class SpringCloudConfig {
                         .uri("http://voiture:9095/"))
                 .route("categorie",r -> r.path("/categorie/**")
                         .uri("http://categorie:9092/"))
+                .route("pieces",r -> r.path("/piece/**")
+                        .uri("http://pieces:9091/"))
+                .route("produits",r -> r.path("/produits/**")
+                        .uri("http://produits:9099/"))
+                .route("projetmicroservice",r -> r.path("/motos/**")
+                        .uri("http://projetmicroservice:9098/"))
+                .route("vetements",r -> r.path("/vetements/**")
+                        .uri("http://vetements:9096/"))
 
 
                 .build();
