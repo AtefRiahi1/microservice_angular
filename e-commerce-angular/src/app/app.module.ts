@@ -19,6 +19,9 @@ import {ListproduitadminComponent} from "./produit/listproduitadmin/listproduita
 import {UpdateproduitComponent} from "./produit/updateproduit/updateproduit.component";
 import {DetailproduitComponent} from "./produit/detailproduit/detailproduit.component";
 import {ListproduitComponent} from "./produit/listproduit/listproduit.component";
+import {ListcategorieComponent} from "./categorie/listcategorie/listcategorie.component";
+import {AjoutercategorieComponent} from "./categorie/ajoutercategorie/ajoutercategorie.component";
+import {UpdatecategorieComponent} from "./categorie/updatecategorie/updatecategorie.component";
 
 @NgModule({
   declarations: [
@@ -35,6 +38,9 @@ import {ListproduitComponent} from "./produit/listproduit/listproduit.component"
     ListproduitComponent,
     ListproduitadminComponent,
     DetailproduitComponent,
+    ListcategorieComponent,
+    AjoutercategorieComponent,
+    UpdatecategorieComponent,
     LayoutComponent
   ],
     imports: [

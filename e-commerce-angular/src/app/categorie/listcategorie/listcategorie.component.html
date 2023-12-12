@@ -1,0 +1,45 @@
+<!-- <div class="container">
+  <div class="row">
+
+    <div class="col-md-4" *ngFor="let categorie of listCategorie">
+      <div class="card" style="width: 15rem; margin-bottom: 20px">
+
+        <div class="card-body">
+          <h5 class="card-title">
+            Nom de categorie: {{ categorie.nomCategorie }}
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Category Name</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let categorie of listCategorie">
+            <td>{{ categorie.nomCategorie }}</td>
+            <td>
+              <button (click)="modifierCategorie(categorie.idCategorie)">
+                Modifier
+              </button>
+              <button (click)="supprimerCategorie(categorie.idCategorie!)">
+                Supprimer
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="text-center mt-4">
+        <button class="btn btn-primary" routerLink="/ajouter">Ajouter</button>
+      </div>
+    </div>
+  </div>
+</div>

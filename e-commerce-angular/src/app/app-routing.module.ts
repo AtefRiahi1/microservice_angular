@@ -13,6 +13,9 @@ import {AddproduitComponent} from "./produit/addproduit/addproduit.component";
 import {UpdateproduitComponent} from "./produit/updateproduit/updateproduit.component";
 import {ListproduitadminComponent} from "./produit/listproduitadmin/listproduitadmin.component";
 import {DetailproduitComponent} from "./produit/detailproduit/detailproduit.component";
+import {AjoutercategorieComponent} from "./categorie/ajoutercategorie/ajoutercategorie.component";
+import {UpdatecategorieComponent} from "./categorie/updatecategorie/updatecategorie.component";
+import {ListcategorieComponent} from "./categorie/listcategorie/listcategorie.component";
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -27,6 +30,9 @@ const routes: Routes = [
   { path: 'edit/:id', component: UpdateproduitComponent },
   { path: 'produitsadmin', component: ListproduitadminComponent },
   { path: 'produitdetail/:id', component: DetailproduitComponent },
+  { path: 'ajouter', component: AjoutercategorieComponent },
+  { path: 'modifiercategorie/:id', component: UpdatecategorieComponent },
+  {path:'listcategorie',component:ListcategorieComponent},
   {path:'**',redirectTo:'',pathMatch:'full'}
 ];
 

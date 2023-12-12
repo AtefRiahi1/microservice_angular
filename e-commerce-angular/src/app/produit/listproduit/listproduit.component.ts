@@ -1,12 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-// @ts-ignore
-import pdfMake from "pdfmake/build/pdfmake";
-// @ts-ignore
-import pdfFonts from "pdfmake/build/vfs_fonts";
 import {Produit} from "../../models/produit";
 import {ProduitService} from "../../services/produit.service";
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 @Component({
   selector: 'app-listproduit',
