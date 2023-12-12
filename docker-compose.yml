@@ -1,0 +1,60 @@
+version: "24.0.6"
+services:
+#container pour Eureka
+  discovery:
+    container_name: serviceregistry
+    build: C:\Users\LENOVO\Desktop\microservice_angular\EurekaServer
+    ports:
+      - "8761:8761"
+    hostname: serviceregistry
+    image: "serviceregistry"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+
+#container pour voiture
+  voiture:
+    container_name: voiture
+    build: C:\Users\LENOVO\Desktop\microservice_angular\voiture
+    ports:
+      - "9095:9095"
+    hostname: voiture
+    image: "voiture"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+    depends_on:
+      - discovery
+
+#container pour categorie
+  categorie:
+    container_name: categorie
+    build: C:\Users\LENOVO\Desktop\microservice_angular\categorie
+    ports:
+      - "9092:9092"
+    hostname: categorie
+    image: "categorie"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+    depends_on:
+      - discovery
+
+#container pour API_Gateway_Server
+  gateway:
+    container_name: gatewayapplication
+    build: C:\Users\LENOVO\Desktop\microservice_angular\API_Gateway_Server
+    ports:
+      - "9097:9097"
+    hostname: gatewayapplication
+    image: "gatewayapplication"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+    depends_on:
+      - discovery
+      
+# Conteneur pour MongoDB
+  mongodb:
+    container_name: mongodb
+    image: "mongo"
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=voiture

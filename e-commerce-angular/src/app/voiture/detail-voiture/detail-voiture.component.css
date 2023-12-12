@@ -1,0 +1,30 @@
+/* Ajoutez ce style dans votre fichier CSS personnalisé */
+
+.container {
+  margin-top: 20px;
+}
+
+.car-image {
+  width: 100%;
+  height: auto;
+}
+
+.car-details {
+  text-align: left;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+.description {
+  color: #666;
+}
+
+.price {
+  color: #e44d26; /* Couleur orange, remplacez-la par la couleur de votre choix */
+}
+
+.btn {
+  margin-top: 10px;
+}

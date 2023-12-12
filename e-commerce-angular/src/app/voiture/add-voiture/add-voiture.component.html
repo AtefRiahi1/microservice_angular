@@ -1,0 +1,61 @@
+
+
+<!-- Form START -->
+<h1 style="margin: 50px;text-align: center">Ajouter une voiture</h1>
+<form style="width: 800px;margin-left: 150px;margin-bottom: 50px" [formGroup]="addForm" (ngSubmit)="add()">
+  <!-- Nom -->
+  <div class="mb-4">
+    <label for="exampleInputNom" class="form-label">modele *</label>
+    <div class="input-group input-group-lg">
+      <input type="text" class="form-control border-0 bg-light rounded-end ps-1" placeholder="modele" id="exampleInputNom" formControlName="modele">
+    </div>
+    <small class="text text-danger" *ngIf="addForm.controls['modele'].invalid && addForm.controls['modele'].touched">Minimum 3 lettres</small>
+  </div>
+  <!-- Prénom -->
+  <div class="mb-4">
+    <label for="exampleInputPrenom" class="form-label">marque *</label>
+    <div class="input-group input-group-lg">
+      <input type="text" class="form-control border-0 bg-light rounded-end ps-1" placeholder="marque" id="exampleInputPrenom" formControlName="marque">
+    </div>
+    <small class="text text-danger" *ngIf="addForm.controls['marque'].invalid && addForm.controls['marque'].touched">Minimum 3 lettres</small>
+  </div>
+  <!-- Cin -->
+  <div class="mb-4">
+    <label for="exampleInputCin" class="form-label">Annee de Fabrication *</label>
+    <div class="input-group input-group-lg">
+      <input type="number" class="form-control border-0 bg-light rounded-end ps-1" placeholder="Annee de Fabrication" id="exampleInputCin" formControlName="anneeFabrication">
+    </div>
+    <span class="text text-danger" *ngIf="addForm.controls['anneeFabrication'].invalid && addForm.controls['anneeFabrication'].touched">4 nombres</span>
+  </div>
+  <!-- Cin -->
+  <div class="mb-4">
+    <label for="exampleInputCin" class="form-label">prix *</label>
+    <div class="input-group input-group-lg">
+      <input type="number" class="form-control border-0 bg-light rounded-end ps-1" placeholder="prix" id="exampleInputprix" formControlName="prix">
+    </div>
+    <span class="text text-danger" *ngIf="addForm.controls['prix'].invalid && addForm.controls['prix'].touched">1 nombre</span>
+  </div>
+  <!-- Image -->
+  <div class="mb-4">
+    <label for="exampleInputImage" class="form-label">Photo *</label>
+    <div class="input-group input-group-lg">
+      <input type="file"  class="form-control border-0 bg-light rounded-end ps-1" required name="exampleInputImage" id="exampleInputImage" [(ngModel)]="image" (change)="onUploadImg($event)">
+    </div>
+  </div>
+  <!-- Ecole -->
+  <div class="mb-4">
+    <label for="exampleInputEcole" class="form-label">description *</label>
+    <div class="input-group input-group-lg">
+      <textarea class="form-control border-0 bg-light rounded-end ps-1" placeholder="description" id="exampleInputEcole" formControlName="description"></textarea>
+    </div>
+    <span class="text text-danger" *ngIf="addForm.controls['description'].invalid && addForm.controls['description'].touched">Minimum 3 lettres</span>
+  </div>
+
+  <!-- Button -->
+  <div class="align-items-center mt-0">
+    <div class="d-grid">
+      <button class="btn btn-primary mb-0" type="submit" [disabled]="addForm.invalid">Ajouter</button>
+    </div>
+  </div>
+</form>
+<!-- Form END -->
