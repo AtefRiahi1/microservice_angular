@@ -26,6 +26,10 @@
           <a class="nav-link" routerLink="/produits">
             <i class="far fa-list-alt"></i>Produits</a>
         </li>
+        <li *ngIf="isLogged && isAdmin==false" class="nav-item">
+          <a class="nav-link" routerLink="/userVetements">
+            <i class="far fa-list-alt"></i>Vetements</a>
+        </li>
         <li *ngIf="isAdmin" class="nav-item">
           <a class="nav-link" routerLink="/dash-admin">
             <i class="fas fa-toolbox"></i>Admin</a>

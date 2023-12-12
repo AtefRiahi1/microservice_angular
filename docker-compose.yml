@@ -37,6 +37,58 @@ services:
     depends_on:
       - discovery
 
+#container pour moto
+  projetmicroservice:
+    container_name: projetmicroservice
+    build: C:\Users\LENOVO\Desktop\microservice_angular\projetmicroservice
+    ports:
+      - "9098:9098"
+    hostname: projetmicroservice
+    image: "projetmicroservice"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+    depends_on:
+      - discovery
+
+#container pour piece
+  pieces:
+    container_name: pieces
+    build: C:\Users\LENOVO\Desktop\microservice_angular\Pieces
+    ports:
+      - "9091:9091"
+    hostname: pieces
+    image: "pieces"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+    depends_on:
+      - discovery
+
+#container pour produits
+  produits:
+    container_name: produits
+    build: C:\Users\LENOVO\Desktop\microservice_angular\Produits
+    ports:
+      - "9099:9099"
+    hostname: produits
+    image: "produits"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+    depends_on:
+      - 
+      
+#container pour vetements
+  vetements:
+    container_name: vetements
+    build: C:\Users\LENOVO\Desktop\microservice_angular\vetements
+    ports:
+      - "9096:9096"
+    hostname: vetements
+    image: "vetements"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+    depends_on:
+      - discovery
+
 #container pour API_Gateway_Server
   gateway:
     container_name: gatewayapplication

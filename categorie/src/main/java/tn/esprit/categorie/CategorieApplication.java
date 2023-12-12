@@ -5,12 +5,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import tn.esprit.categorie.entites.Categorie;
 import tn.esprit.categorie.repositories.CategorieRepo;
 
 @SpringBootApplication
 @NoArgsConstructor
+@EnableEurekaClient
 public class CategorieApplication {
 
 	public static void main(String[] args) {

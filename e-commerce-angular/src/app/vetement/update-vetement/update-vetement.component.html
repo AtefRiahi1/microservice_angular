@@ -1,0 +1,130 @@
+<section class="p-0 d-flex align-items-center position-relative overflow-hidden">
+
+    <div class="container-fluid">
+        <div [class.circle-icon]="isClicked" class="position-absolute top-0 end-0 p-2" (click)="goBack()">
+            <style>
+                .circle-icon {
+                    border-radius: 50%;
+                    width: 40px;
+                    /* Ajustez la taille du cercle selon vos besoins */
+                    height: 40px;
+                    background-color: #fff;
+                    /* Couleur de fond du cercle */
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                    /* Ombre légère pour un effet de levée */
+                }
+            </style>
+            <div class="circle-icon">
+                <i class="bi bi-arrow-left"></i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-6 m-auto">
+                <div class="row my-5">
+                    <div class="col-sm-10 col-xl-8 m-auto">
+                        <form [formGroup]="updateForm" (ngSubmit)="update()" *ngIf="updateForm">
+
+
+                            <div class="mb-4">
+                                <label for="exampleInputNom" class="form-label">Type Du Vetement</label>
+                                <div class="input-group input-group-lg">
+                                    <span
+                                        class="input-group-text bg-light rounded-start border-0 text-secondary px-3"><i
+                                            class="fas fa-home"></i></span>
+                                    <input type="text" class="form-control border-0 bg-light rounded-end ps-1"
+                                        placeholder="Type" id="exampleInputNom" formControlName="type">
+
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="couleur" class="form-label">Couleur</label>
+                                <input type="text" id="couleur" class="form-control" formControlName="couleur" >
+                              </div>
+
+                              <!--<div class="mb-4">
+                                <label for="taille" class="form-label">Taille</label>
+                                <input type="text" id="taille" class="form-control" formControlName="taille" >
+                              </div>-->
+                            <div class="mb-4">
+                                <label for="taille" class="form-label">Taille</label>
+                                <select id="taille" class="form-select" formControlName="taille">
+                                    <option value="XS">XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="marque" class="form-label">Marque</label>
+                                <input type="text" id="marque" class="form-control" formControlName="marque">
+                            </div>
+
+                            <!--<div class="mb-4">
+                                <label for="saison" class="form-label">Saison</label>
+                                <input type="text" id="saison" class="form-control" formControlName="saison" >
+                              </div>-->
+                            <div class="mb-4">
+                                <label for="saison" class="form-label">Saison</label>
+                                <select id="saison" class="form-select" formControlName="saison">
+                                    <option value="hiver">Hiver</option>
+                                    <option value="été">Été</option>
+                                    <option value="printemps">Printemps</option>
+                                    <option value="automne">Automne</option>
+                                </select>
+                            </div>
+
+                            <!--<div class="mb-4">
+                                <label for="sexe" class="form-label">Sexe</label>
+                                <input type="text" id="sexe" class="form-control" formControlName="sexe" >
+                              </div>-->
+                            <div class="mb-4">
+                                <label class="form-label">Sexe</label>
+                                <div class="form-check">
+                                    <input type="radio" id="homme" class="form-check-input" value="homme"
+                                        formControlName="sexe">
+                                    <label class="form-check-label" for="homme">Homme</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="femme" class="form-check-input" value="femme"
+                                        formControlName="sexe">
+                                    <label class="form-check-label" for="femme">Femme</label>
+                                </div>
+                            </div>
+
+                              <div class="mb-4">
+                                <label for="prix" class="form-label">Prix</label>
+                                <input type="number" id="prix" class="form-control" formControlName="prix" >
+                              </div>
+
+
+                            <div class="mb-4">
+                                <label for="exampleInputImage" class="form-label">Image du vetement</label>
+                                <div class="input-group input-group-lg">
+                                    <span
+                                        class="input-group-text bg-light rounded-start border-0 text-secondary px-3"><i
+                                            class="fas fa-file-image"></i></span>
+                                    <input type="file" class="form-control border-0 bg-light rounded-end ps-1"
+                                        id="exampleInputImage" [(ngModel)]="image" (change)="onUploadImg($event)">
+                                </div>
+                            </div>
+                            <!--Button-->
+                            <div class="align-items-center mt-0">
+                                <div class="d-grid">
+                                    <button class="btn btn-primary mb-0" type="submit">Ajouter</button>
+
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

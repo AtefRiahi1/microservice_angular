@@ -25,6 +25,10 @@ import {ListPiecesComponent} from "./piece/list-pieces/list-pieces.component";
 import {AddPiecesComponent} from "./piece/add-pieces/add-pieces.component";
 import {UpdatePiecesComponent} from "./piece/update-pieces/update-pieces.component";
 import {AllPiecesComponent} from "./piece/all-pieces/all-pieces.component";
+import {ListVetementComponent} from "./vetement/list-vetement/list-vetement.component";
+import {ListVetementUserComponent} from "./vetement/list-vetement-user/list-vetement-user.component";
+import {AddVetementComponent} from "./vetement/add-vetement/add-vetement.component";
+import {UpdateVetementComponent} from "./vetement/update-vetement/update-vetement.component";
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -51,6 +55,10 @@ const routes: Routes = [
   { path: 'pieces/addP', component: AddPiecesComponent },
   {path:'pieces/updateP/:id', component: UpdatePiecesComponent},
   {path:'allpieces', component:AllPiecesComponent},
+  { path: 'vetements', component: ListVetementComponent },
+  { path: 'userVetements', component: ListVetementUserComponent },
+  { path: 'vetements/addVetement', component: AddVetementComponent },
+  { path: 'vetements/updateVetement/:id', component: UpdateVetementComponent},
   {path:'**',redirectTo:'',pathMatch:'full'}
 ];
 

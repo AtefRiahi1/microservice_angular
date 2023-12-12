@@ -32,6 +32,10 @@ import {ListPiecesComponent} from "./piece/list-pieces/list-pieces.component";
 import {AddPiecesComponent} from "./piece/add-pieces/add-pieces.component";
 import {UpdatePiecesComponent} from "./piece/update-pieces/update-pieces.component";
 import {AllPiecesComponent} from "./piece/all-pieces/all-pieces.component";
+import {ListVetementComponent} from "./vetement/list-vetement/list-vetement.component";
+import {AddVetementComponent} from "./vetement/add-vetement/add-vetement.component";
+import {UpdateVetementComponent} from "./vetement/update-vetement/update-vetement.component";
+import {ListVetementUserComponent} from "./vetement/list-vetement-user/list-vetement-user.component";
 
 @NgModule({
   declarations: [
@@ -60,6 +64,10 @@ import {AllPiecesComponent} from "./piece/all-pieces/all-pieces.component";
     AddPiecesComponent,
     UpdatePiecesComponent,
     AllPiecesComponent,
+    ListVetementComponent,
+    AddVetementComponent,
+    UpdateVetementComponent,
+    ListVetementUserComponent,
     LayoutComponent
   ],
     imports: [
