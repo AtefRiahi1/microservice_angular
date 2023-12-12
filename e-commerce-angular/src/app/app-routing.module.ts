@@ -8,6 +8,11 @@ import {UpdateVoitureComponent} from "./voiture/update-voiture/update-voiture.co
 import {DetailVoitureComponent} from "./voiture/detail-voiture/detail-voiture.component";
 import {ListClientVoitureComponent} from "./voiture/list-client-voiture/list-client-voiture.component";
 import {LayoutComponent} from "./layout/layout.component";
+import {ListproduitComponent} from "./produit/listproduit/listproduit.component";
+import {AddproduitComponent} from "./produit/addproduit/addproduit.component";
+import {UpdateproduitComponent} from "./produit/updateproduit/updateproduit.component";
+import {ListproduitadminComponent} from "./produit/listproduitadmin/listproduitadmin.component";
+import {DetailproduitComponent} from "./produit/detailproduit/detailproduit.component";
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -17,6 +22,11 @@ const routes: Routes = [
   {path:'detail-voiture/:id',component:DetailVoitureComponent},
   {path:'list-voiture-client',component:ListClientVoitureComponent},
   {path:'dash-admin',component:LayoutComponent},
+  { path: 'produits', component: ListproduitComponent },
+  { path: 'addproduits', component: AddproduitComponent },
+  { path: 'edit/:id', component: UpdateproduitComponent },
+  { path: 'produitsadmin', component: ListproduitadminComponent },
+  { path: 'produitdetail/:id', component: DetailproduitComponent },
   {path:'**',redirectTo:'',pathMatch:'full'}
 ];
 

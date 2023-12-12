@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="text-center mt-4">
+    <a class="btn btn-primary" href="/addproduits">Add Product</a>
+  </div>
+  <h2 class="title mt-4">List of Products</h2>
+
+  <div class="product-list">
+    <div *ngFor="let produit of produits" class="product-card">
+      <div class="product-image">
+        <img src="http://localhost:9095/voiture/{{produit.image}}" [alt]="produit.image" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h3>{{ produit.nom }}</h3>
+        <p class="price">{{ produit.prix | currency: 'USD': 'symbol' }}</p>
+        <p>{{ produit.description }}</p>
+        <div class="button-group">
+          <a class="btn btn-primary" href="/edit/{{ produit.id }}">Edit</a>
+          <button class="btn btn-danger" (click)="deleteProduit(produit.id)">Delete</button>
+          <a class="btn btn-secondary" href="/produitdetail/{{ produit.id }}">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

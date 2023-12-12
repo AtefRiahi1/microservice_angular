@@ -14,6 +14,11 @@ import { AddVoitureComponent } from './voiture/add-voiture/add-voiture.component
 import { UpdateVoitureComponent } from './voiture/update-voiture/update-voiture.component';
 import { ListClientVoitureComponent } from './voiture/list-client-voiture/list-client-voiture.component';
 import { LayoutComponent } from './layout/layout.component';
+import {AddproduitComponent} from "./produit/addproduit/addproduit.component";
+import {ListproduitadminComponent} from "./produit/listproduitadmin/listproduitadmin.component";
+import {UpdateproduitComponent} from "./produit/updateproduit/updateproduit.component";
+import {DetailproduitComponent} from "./produit/detailproduit/detailproduit.component";
+import {ListproduitComponent} from "./produit/listproduit/listproduit.component";
 
 @NgModule({
   declarations: [
@@ -25,6 +30,11 @@ import { LayoutComponent } from './layout/layout.component';
     AddVoitureComponent,
     UpdateVoitureComponent,
     ListClientVoitureComponent,
+    AddproduitComponent,
+    UpdateproduitComponent,
+    ListproduitComponent,
+    ListproduitadminComponent,
+    DetailproduitComponent,
     LayoutComponent
   ],
     imports: [

@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="text-center mt-4">
+    <a class="btn btn-primary" routerLink="/addproduits">Add Product</a>
+  </div>
+  <h2 class="title mt-4">List of Products</h2>
+
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let produit of produits">
+        <td>{{ produit.nom }}</td>
+        <td>{{ produit.prix | currency: 'USD': 'symbol' }}</td>
+        <td>{{ produit.description }}</td>
+        <td>
+          <div class="button-group">
+            <a class="btn btn-primary" routerLink="/edit/{{ produit.id }}">Edit</a>
+            <button class="btn btn-danger" (click)="deleteProduit(produit.id)">Delete</button>
+            <a class="btn btn-secondary" routerLink="/produitdetail/{{ produit.id }}">View Details</a>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

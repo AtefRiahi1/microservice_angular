@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="text-center mt-4">
+    <h2>Product Details</h2>
+  </div>
+
+  <div *ngIf="product" class="product-details">
+    <div class="card">
+      <div class="card-body">
+        <img *ngIf="product.image" src="http://localhost:9095/voiture/{{product.image}}" alt="Product Image" class="product-image">
+
+        <h5 class="card-title">{{ product.nom }}</h5>
+        <p class="card-text">Price: {{ product.prix }}</p>
+        <p class="card-text">Description: {{ product.description }}</p>
+      </div>
+    </div>
+  </div>
+
+</div>

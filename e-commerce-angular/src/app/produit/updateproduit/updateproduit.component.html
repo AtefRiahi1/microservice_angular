@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="text-center mt-4">
+    <h2>Update Product</h2>
+  </div>
+
+  <div *ngIf="product" class="product-form">
+    <div class="form-group">
+      <label for="name">Product Name</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="product.nom" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" class="form-control" id="price" [(ngModel)]="product.prix" name="price" required>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" [(ngModel)]="product.description" name="description" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="image">Image URL</label>
+      <input type="file" class="form-control" id="image" [(ngModel)]="image" (change)="onUploadImg($event)" name="image" required>
+    </div>
+
+    <div class="text-center mt-4">
+      <button class="btn btn-primary" (click)="updateProduct()">Update Product</button>
+    </div>
+  </div>
+</div>
