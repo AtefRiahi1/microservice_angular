@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="text-center mt-4">
+    <a class="btn btn-primary" routerLink="/addmotos">Add Moto</a>
+  </div>
+  <h2 class="title mt-4">List of Motos</h2>
+
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Marque</th>
+        <th>Price</th>
+        <th>Modele</th>
+        <th>AnneeFabrication</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let moto of motos">
+        <td>{{ moto.marque }}</td>
+        <td>{{ moto.prix | currency: 'USD': 'symbol' }}</td>
+        <td>{{ moto.modele }}</td>
+        <td>{{ moto.anneeFabrication }}</td>
+
+        <td>
+          <div class="button-group">
+            <a class="btn btn-primary" routerLink="/edit/{{ moto.id }}">Edit</a>
+            <button class="btn btn-danger" (click)="deleteMoto(moto.id)">Delete</button>
+            <a class="btn btn-secondary" routerLink="/motodetail/{{ moto.id }}">View Details</a>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

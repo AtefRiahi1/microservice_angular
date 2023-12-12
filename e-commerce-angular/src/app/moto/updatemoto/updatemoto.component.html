@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="text-center mt-4">
+    <h2>Update Moto</h2>
+  </div>
+
+  <div *ngIf="moto" class="product-form">
+    <div class="form-group">
+      <label for="marque">Moto Marque</label>
+      <input type="text" class="form-control" id="marque" [(ngModel)]="moto.marque" name="marque" required>
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" class="form-control" id="price" [(ngModel)]="moto.prix" name="price" required>
+    </div>
+
+    <div class="form-group">
+      <label for="modele">Modele</label>
+      <textarea class="form-control" id="modele" [(ngModel)]="moto.modele" name="modele" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="anneeFabrication">anneeFabrication</label>
+      <textarea class="form-control" id="anneeFabrication" [(ngModel)]="moto.anneeFabrication" name="anneeFabrication" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="image">Image URL</label>
+      <input type="file" class="form-control" id="image" [(ngModel)]="image" (change)="onUploadImg($event)" name="image" required>
+    </div>
+
+    <div class="text-center mt-4">
+      <button class="btn btn-primary" (click)="updateMoto()">Update moto</button>
+    </div>
+  </div>
+</div>

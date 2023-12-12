@@ -16,6 +16,11 @@ import {DetailproduitComponent} from "./produit/detailproduit/detailproduit.comp
 import {AjoutercategorieComponent} from "./categorie/ajoutercategorie/ajoutercategorie.component";
 import {UpdatecategorieComponent} from "./categorie/updatecategorie/updatecategorie.component";
 import {ListcategorieComponent} from "./categorie/listcategorie/listcategorie.component";
+import {ListmotoComponent} from "./moto/listmoto/listmoto.component";
+import {AddmotoComponent} from "./moto/addmoto/addmoto.component";
+import {UpdatemotoComponent} from "./moto/updatemoto/updatemoto.component";
+import {ListmotoadminComponent} from "./moto/listmotoadmin/listmotoadmin.component";
+import {DetailmotoComponent} from "./moto/detailmoto/detailmoto.component";
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -27,12 +32,17 @@ const routes: Routes = [
   {path:'dash-admin',component:LayoutComponent},
   { path: 'produits', component: ListproduitComponent },
   { path: 'addproduits', component: AddproduitComponent },
-  { path: 'edit/:id', component: UpdateproduitComponent },
+  { path: 'editproduit/:id', component: UpdateproduitComponent },
   { path: 'produitsadmin', component: ListproduitadminComponent },
   { path: 'produitdetail/:id', component: DetailproduitComponent },
   { path: 'ajouter', component: AjoutercategorieComponent },
   { path: 'modifiercategorie/:id', component: UpdatecategorieComponent },
   {path:'listcategorie',component:ListcategorieComponent},
+  { path: 'motos', component: ListmotoComponent },
+  { path: 'addmotos', component: AddmotoComponent },
+  { path: 'edit/:id', component: UpdatemotoComponent },
+  { path: 'motosadmin', component: ListmotoadminComponent },
+  { path: 'motodetail/:id', component: DetailmotoComponent },
   {path:'**',redirectTo:'',pathMatch:'full'}
 ];
 

@@ -13,6 +13,11 @@
         <li *ngIf="isLogged && isAdmin==false" class="nav-item">
           <a class="nav-link" routerLink="/list-voiture-client">
             <i class="far fa-list-alt"></i>Voitures</a>
+        </li>
+        <li *ngIf="isLogged && isAdmin==false" class="nav-item">
+          <a class="nav-link" routerLink="/motos">
+            <i class="far fa-list-alt"></i>Moto</a>
+        </li>
         <li *ngIf="isLogged && isAdmin==false" class="nav-item">
           <a class="nav-link" routerLink="/produits">
             <i class="far fa-list-alt"></i>Produits</a>

@@ -22,6 +22,12 @@ import {ListproduitComponent} from "./produit/listproduit/listproduit.component"
 import {ListcategorieComponent} from "./categorie/listcategorie/listcategorie.component";
 import {AjoutercategorieComponent} from "./categorie/ajoutercategorie/ajoutercategorie.component";
 import {UpdatecategorieComponent} from "./categorie/updatecategorie/updatecategorie.component";
+import {AddmotoComponent} from "./moto/addmoto/addmoto.component";
+import {UpdatemotoComponent} from "./moto/updatemoto/updatemoto.component";
+import {ListmotoComponent} from "./moto/listmoto/listmoto.component";
+import {ListmotoadminComponent} from "./moto/listmotoadmin/listmotoadmin.component";
+import {DetailmotoComponent} from "./moto/detailmoto/detailmoto.component";
+import {NgxQRCodeModule} from "ngx-qrcode2";
 
 @NgModule({
   declarations: [
@@ -41,12 +47,18 @@ import {UpdatecategorieComponent} from "./categorie/updatecategorie/updatecatego
     ListcategorieComponent,
     AjoutercategorieComponent,
     UpdatecategorieComponent,
+    AddmotoComponent,
+    UpdatemotoComponent,
+    ListmotoComponent,
+    ListmotoadminComponent,
+    DetailmotoComponent,
     LayoutComponent
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
+        NgxQRCodeModule,
         FormsModule,
       OAuthModule.forRoot({
         resourceServer: {

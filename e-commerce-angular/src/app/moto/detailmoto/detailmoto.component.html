@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card">
+    <ul class="list-group p-3">
+      <li class="list-group-item list-group-item-dark">Identifiant Moto : <strong>{{ moto.id }}</strong></li>
+      <li class="list-group-item list-group-item-dark">Marque : <strong>{{ moto.marque }}</strong></li>
+      <li class="list-group-item list-group-item-dark">Modele : <strong>{{ moto.modele }}</strong></li>
+      <li class="list-group-item list-group-item-dark">Année de Fabrication : <strong>{{ moto.anneeFabrication }}</strong></li>
+      <li class="list-group-item list-group-item-dark">Prix : <strong>{{ moto.prix }}</strong></li>
+      <li class="list-group-item list-group-item-dark">
+        <!-- Vous pouvez inclure ici votre composant ngx-qrcode pour la moto -->
+        <!-- Assurez-vous d'avoir les valeurs correctes pour qrType et qrValue -->
+        <ngx-qrcode [elementType]="qrType" [value]="qrValue"></ngx-qrcode>
+      </li>
+    </ul>
+    <div *ngIf="!moto">
+      <p>Loading...</p>
+    </div>
+  </div>
+</div>

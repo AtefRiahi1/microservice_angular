@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let moto of motos">
+      <div
+        class="card mb-3"
+        style="border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s ease-in-out;"
+        onmouseover="this.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';"
+        onmouseleave="this.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';"
+      >
+        <img src="http://localhost:9095/voiture/{{moto.image}}" [alt]="moto.marque" class="card-img-top" style="height: 200px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">{{ moto.marque }}</h5>
+          <p class="card-text">Prix: {{ moto.prix | currency: 'USD': 'symbol' }}</p>
+          <p class="card-text">{{ moto.modele }}</p>
+          <p class="card-text">{{ moto.anneeFabrication }}</p>
+
+          <a class="badge rounded-pill text-bg-info w-75" href="/motodetail/{{ moto.id }}">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
