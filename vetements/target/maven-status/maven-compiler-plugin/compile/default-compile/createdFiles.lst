@@ -1,0 +1,5 @@
+tn\esprit\vetements\VetementsApplication.class
+tn\esprit\vetements\VetementService.class
+tn\esprit\vetements\Vetement.class
+tn\esprit\vetements\VetementRepository.class
+tn\esprit\vetements\VetementController.class
