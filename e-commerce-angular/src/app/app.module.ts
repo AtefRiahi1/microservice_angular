@@ -28,6 +28,10 @@ import {ListmotoComponent} from "./moto/listmoto/listmoto.component";
 import {ListmotoadminComponent} from "./moto/listmotoadmin/listmotoadmin.component";
 import {DetailmotoComponent} from "./moto/detailmoto/detailmoto.component";
 import {NgxQRCodeModule} from "ngx-qrcode2";
+import {ListPiecesComponent} from "./piece/list-pieces/list-pieces.component";
+import {AddPiecesComponent} from "./piece/add-pieces/add-pieces.component";
+import {UpdatePiecesComponent} from "./piece/update-pieces/update-pieces.component";
+import {AllPiecesComponent} from "./piece/all-pieces/all-pieces.component";
 
 @NgModule({
   declarations: [
@@ -52,6 +56,10 @@ import {NgxQRCodeModule} from "ngx-qrcode2";
     ListmotoComponent,
     ListmotoadminComponent,
     DetailmotoComponent,
+    ListPiecesComponent,
+    AddPiecesComponent,
+    UpdatePiecesComponent,
+    AllPiecesComponent,
     LayoutComponent
   ],
     imports: [

@@ -21,6 +21,10 @@ import {AddmotoComponent} from "./moto/addmoto/addmoto.component";
 import {UpdatemotoComponent} from "./moto/updatemoto/updatemoto.component";
 import {ListmotoadminComponent} from "./moto/listmotoadmin/listmotoadmin.component";
 import {DetailmotoComponent} from "./moto/detailmoto/detailmoto.component";
+import {ListPiecesComponent} from "./piece/list-pieces/list-pieces.component";
+import {AddPiecesComponent} from "./piece/add-pieces/add-pieces.component";
+import {UpdatePiecesComponent} from "./piece/update-pieces/update-pieces.component";
+import {AllPiecesComponent} from "./piece/all-pieces/all-pieces.component";
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -43,6 +47,10 @@ const routes: Routes = [
   { path: 'edit/:id', component: UpdatemotoComponent },
   { path: 'motosadmin', component: ListmotoadminComponent },
   { path: 'motodetail/:id', component: DetailmotoComponent },
+  { path: 'pieces', component: ListPiecesComponent },
+  { path: 'pieces/addP', component: AddPiecesComponent },
+  {path:'pieces/updateP/:id', component: UpdatePiecesComponent},
+  {path:'allpieces', component:AllPiecesComponent},
   {path:'**',redirectTo:'',pathMatch:'full'}
 ];
 
