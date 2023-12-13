@@ -11,10 +11,10 @@ export class VoitureService {
   url='http://localhost:9095/voiture';
   constructor(private http:HttpClient) { }
   public list():Observable<Voiture[]>{
-    return this.http.get<Voiture[]>('http://localhost:9097/voiture');
+    return this.http.get<Voiture[]>('http://localhost:9095/voiture');
   }
   public detail(id:string):Observable<Voiture>{
-    return this.http.get<Voiture>('http://localhost:9097/voiture/detail/'+id);
+    return this.http.get<Voiture>('http://localhost:9095/voiture/detail/'+id);
   }
   upload(formData:FormData):Observable<HttpEvent<string>>{
     return this.http.post<string>(this.url+`/upload`,formData,{

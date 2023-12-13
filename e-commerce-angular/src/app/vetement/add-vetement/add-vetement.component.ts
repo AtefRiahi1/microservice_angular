@@ -23,7 +23,6 @@ export class AddVetementComponent {
     saison: new FormControl('', [Validators.required]),
     sexe: new FormControl('', [Validators.required]),
     prix: new FormControl('', [Validators.required]),
-    image: new FormControl(''),
 
   });
 
@@ -44,7 +43,7 @@ export class AddVetementComponent {
             saison: String(this.addForm.value.saison) || '',
             sexe: String(this.addForm.value.sexe) || '',
             prix:Number(this.addForm.value.prix) || 0,
-            image:String(this.image )|| ''
+            image:this.image || ''
         };
         this.vetementS.createVetement(vetement).subscribe(
             () => {
